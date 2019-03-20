@@ -42,7 +42,7 @@ class EmailWorker(Worker):
     
             #If the supplied email is a string, make it a Email object
             if isinstance(Email['filename'], str):
-                msg = email.message_from_string(Email)
+                msg = email.message_from_string(Email['filename'])
             else:
                 msg = Email
     
